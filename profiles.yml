@@ -1,0 +1,14 @@
+dbt_tutorial:
+    target: sandbox
+
+    outputs:
+        sandbox:
+            type: bigquery
+            method: oauth
+            project: holded-analytics-sb-jesus-01c3 # Replace this with the project ID of your sandbox.
+            dataset: dbt_carlos_g
+            threads: 16
+            timeout_seconds: 300
+            location: EU
+            priority: interactive
+            #maximum_bytes_billed: 1000000000
